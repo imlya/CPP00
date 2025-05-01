@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:45 by imatek            #+#    #+#             */
-/*   Updated: 2025/04/30 15:39:09 by imatek           ###   ########.fr       */
+/*   Updated: 2025/05/01 12:40:52 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-int main(int ac, char **av)
+int main()
 {
+	PhoneBook book;
+	Contact users;
+
+	return (0);
 }
