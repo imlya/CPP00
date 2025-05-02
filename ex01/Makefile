@@ -1,5 +1,5 @@
 NAME= MyAwesomePhoneBook
-SRC= src/PhoneBook.cpp src/Contact.cpp src/main.cpp
+SRC= src/PhoneBook.cpp src/Contact.cpp src/main.cpp src/actions.cpp
 OBJS= $(SRC:.cpp=.o)
 CC= c++
 CFLAGS= -Wall -Wextra -Werror -std=c++98 -Iinclude

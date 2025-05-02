@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:36 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/01 22:20:50 by Moon             ###   ########.fr       */
+/*   Updated: 2025/05/02 23:31:35 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 #include <iostream>
+#include <string>
 
 class Contact{
 
@@ -28,13 +29,15 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	void	add(void);
-	void	search(void);
+	void	fill_contact(void);
+	void	display_full(void);
+	void	display_summary(int i);
 	void	set_first(std::string first);
 	void	set_last(std::string last);
 	void	set_nickname(std::string nick);
 	void	set_phone(std::string phone);
 	void	set_secret(std::string secret);
+	// void	setteur(std::string first, std::string last, std::string nick, std::string phone, std::string secret);
 };
 
 #endif
