@@ -1,35 +1,53 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-
 // fonction membre
 // contient tjs 1 parametre par defaut = pointeur sur instance courante
 void Contact::fill_contact()
 {
-	char buff[45];
-
+	//cin s'arrete au premier espace : utiliser getline
 	std::cout << "===== NEW CONTACT =====" << std::endl;
-	std::cout << "First name : "; std::cin >> buff;
-	std::cout << "Last name : "; std::cin >> buff;
-	std::cout << "Nickname : "; std::cin >> buff;
-	std::cout << "Phone number : "; std::cin >> buff;
-	std::cout << "Darkest secret : "; std::cin >> buff;
+	while(_first_name.empty())
+	{
+		std::cout << "First name : "; getline(std::cin, this->_first_name);
+		if(_first_name.empty())
+			std::cout << "please enter your First name" << std::endl;
+	}
+	while(_last_name.empty())
+	{
+		std::cout << "Last name : "; getline(std::cin, this->_last_name);
+		if(_last_name.empty())
+			std::cout << "please enter your Last name" << std::endl;
+	}
+	while(_nickname.empty())
+	{
+		std::cout << "Nickname : "; getline(std::cin, this->_nickname);
+		if(_nickname.empty())
+			std::cout << "please enter your Nickname" << std::endl;
+	}
+	//verifier que c'est que des chiffes (comment utiliser isdigit ?)
+	while(_phone_number.empty())
+	{
+		std::cout << "Phone number : "; getline(std::cin, this->_phone_number);
+		if(_phone_number.empty())
+			std::cout << "please enter your Phone number" << std::endl;
+	}
+	while(_darkest_secret.empty())
+	{
+		std::cout << "Darkest secret : "; getline(std::cin, this->_darkest_secret);
+		if(_darkest_secret.empty())
+			std::cout << "please enter your Darkest secret" << std::endl;
+	}
 	std::cout << "======================" << std::endl;
-
-
-	// -entree utilisateur cin
-	// -stock
-	// pas de champ vide
-	return;
 }
 
-void Contact::display_full()
+void Contact::display_full() const
 {
 	// 1 attribut / ligne
 	return;
 }
 
-void Contact::display_summary(int i)
+void Contact::display_summary(int i) const
 {
 	(void)i;
 	// 0|  Jean    |  Dupont  |  Jeanjean
@@ -56,7 +74,7 @@ void PhoneBook::search()
 	return;
 }
 
-void PhoneBook::display_list()
+void PhoneBook::display_list () const
 {
 	return;
 }

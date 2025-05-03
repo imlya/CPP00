@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:36 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/02 23:31:35 by imatek           ###   ########.fr       */
+/*   Updated: 2025/05/03 10:44:08 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	void	fill_contact(void);
-	void	display_full(void);
-	void	display_summary(int i);
+	void	fill_contact();
+	void	display_full(void) const;
+	void	display_summary(int i) const;
 	void	set_first(std::string first);
 	void	set_last(std::string last);
 	void	set_nickname(std::string nick);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:39 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/02 23:42:25 by imatek           ###   ########.fr       */
+/*   Updated: 2025/05/03 10:35:41 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 
 	void	add(void);
 	void	search(void);
-	void	display_list(void);
+	void	display_list(void) const;
 };
 
 #endif
