@@ -55,13 +55,15 @@ void Contact::display_full() const
 
 void Contact::display_summary(int i) const
 {
-	(void)i;
-	// 0|  Jean    |  Dupont  |  Jeanjean
+	Contact searched;
+
+	std::cout << i << '|' << _first_name << '|';
+	std::cout << _last_name << '|' << _nickname << '|' << std::endl;
 	// 10 char max
 	// si + . a la fin
 	// alignes a droite
 	// entrer le BON index du contact
-		// display_full;
+		searched.display_full();
 	// else
 	// 	error;
 	return;
