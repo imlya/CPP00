@@ -6,7 +6,7 @@
 /*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:36 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/05 21:45:52 by Moon             ###   ########.fr       */
+/*   Updated: 2025/05/05 23:44:02 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	~Contact(void);
 
 	int 	full_digit();
-	void	fill_contact();
+	void	fill_contact(void);
 	void	display_full(void) const;
 	void	display_summary(int i) const;
 };
