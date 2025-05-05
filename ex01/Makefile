@@ -1,8 +1,8 @@
 NAME= MyAwesomePhoneBook
-SRC= src/PhoneBook.cpp src/Contact.cpp src/main.cpp src/actions.cpp
+SRC= src/PhoneBook.cpp src/Contact_utils.cpp src/main.cpp src/actions.cpp
 OBJS= $(SRC:.cpp=.o)
 CC= c++
-CFLAGS= -Wall -Wextra -Werror -std=c++98 -Iinclude
+CFLAGS= -Wall -Wextra -Werror -std=c++98 -Iinclude -g3
 RM= rm -f
 
 RESET = \033[0m

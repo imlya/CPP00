@@ -1,13 +1,11 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-// fonction membre
 // contient tjs 1 parametre par defaut = pointeur sur instance courante
 void Contact::fill_contact()
 {
-	//cin s'arrete au premier espace : utiliser getline
+	//verifier si que des lettres ou '-' dans le prenom/ nom
 	std::cout << "===== NEW CONTACT =====" << std::endl;
-	//verifier si que des lettres ou - dans le prenom
 	while(_first_name.empty())
 	{
 		std::cout << "First name : "; getline(std::cin, this->_first_name);
@@ -26,14 +24,13 @@ void Contact::fill_contact()
 		if(_nickname.empty())
 			std::cout << "please enter your Nickname" << std::endl;
 	}
-	int i = 0;
-	while(_phone_number.empty() || !isdigit(_phone_number[i++]))
+	while(_phone_number.empty() || !full_digit())
 	{
 		std::cout << "Phone number : "; getline(std::cin, this->_phone_number);
-		if(!isdigit(_phone_number[i]))
-			std::cout << "please enter digits" << std::endl;
 		if(_phone_number.empty())
 			std::cout << "please enter your Phone number" << std::endl;
+		if(!full_digit())
+			std::cout << "please enter digits" << std::endl;
 	}
 	while(_darkest_secret.empty())
 	{
@@ -41,7 +38,16 @@ void Contact::fill_contact()
 		if(_darkest_secret.empty())
 			std::cout << "please enter your Darkest secret" << std::endl;
 	}
-	std::cout << "======================" << std::endl;
+	std::cout << "========================" << std::endl;
+}
+
+void Contact::display_summary(int i) const
+{
+	std::cout << i << '|' << _first_name << '|';
+	std::cout << _last_name << '|' << _nickname << '|' << std::endl;
+	// 10 char max
+	// si + (.) a la fin
+	// alignes a droite
 }
 
 void Contact::display_full() const
@@ -51,38 +57,4 @@ void Contact::display_full() const
 	std::cout << "Nickname : " << _nickname << std::endl;
 	std::cout << "Phone number : " << _phone_number << std::endl;
 	std::cout << "Darkest secret : " << _darkest_secret << std::endl;
-}
-
-void Contact::display_summary(int i) const
-{
-	Contact searched;
-
-	std::cout << i << '|' << _first_name << '|';
-	std::cout << _last_name << '|' << _nickname << '|' << std::endl;
-	// 10 char max
-	// si + . a la fin
-	// alignes a droite
-	// entrer le BON index du contact
-		searched.display_full();
-	// else
-	// 	error;
-	return;
-}
-
-void PhoneBook::add()
-{
-	Contact added;
-
-	added.fill_contact();
-	return;
-}
-
-void PhoneBook::search()
-{
-	return;
-}
-
-void PhoneBook::display_list () const
-{
-	return;
 }

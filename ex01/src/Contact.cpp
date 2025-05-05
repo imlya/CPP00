@@ -6,7 +6,7 @@
 /*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:42 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/03 10:56:33 by Moon             ###   ########.fr       */
+/*   Updated: 2025/05/05 21:57:27 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,32 +24,10 @@ Contact::~Contact(void)
 	return ;
 }
 
-void Contact::set_first(std::string first)
+int Contact::full_digit()
 {
-	this->_first_name = first;
-	return ;
-}
-
-void Contact::set_last(std::string last)
-{
-	this->_last_name = last;
-	return ;
-}
-
-void Contact::set_nickname(std::string nick)
-{
-	this->_nickname = nick;
-	return ;
-}
-
-void Contact::set_phone(std::string phone)
-{
-	this->_phone_number = phone;
-	return ;
-}
-
-void Contact::set_secret(std::string secret)
-{
-	this->_darkest_secret = secret;
-	return ;
+	for (size_t i = 0; i < _phone_number.length(); i++)
+		if(!isdigit(_phone_number[i]))
+			return (0);
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:36 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/04 09:52:57 by Moon             ###   ########.fr       */
+/*   Updated: 2025/05/05 21:45:52 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,10 @@ public:
 	Contact(void);
 	~Contact(void);
 
+	int 	full_digit();
 	void	fill_contact();
 	void	display_full(void) const;
 	void	display_summary(int i) const;
-	void	set_first(std::string first);
-	void	set_last(std::string last);
-	void	set_nickname(std::string nick);
-	void	set_phone(std::string phone);
-	void	set_secret(std::string secret);
-	// void	setteur(std::string first, std::string last, std::string nick, std::string phone, std::string secret);
 };
 
 #endif
