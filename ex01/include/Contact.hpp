@@ -6,7 +6,7 @@
 /*   By: Moon <Moon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 15:37:36 by imatek            #+#    #+#             */
-/*   Updated: 2025/05/05 23:44:02 by Moon             ###   ########.fr       */
+/*   Updated: 2025/05/06 10:08:50 by Moon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <iomanip>
 
 class Contact{
 
@@ -30,10 +31,11 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	int 	full_digit();
-	void	fill_contact(void);
-	void	display_full(void) const;
-	void	display_summary(int i) const;
+	int 	phone_is_digit();
+	int		printable_infos(std::string &string);
+	void	infos_contact(void);
+	void	all_infos(void) const;
+	void	summary_infos(int i) const;
 };
 
 #endif
